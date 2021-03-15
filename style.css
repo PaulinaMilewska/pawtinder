@@ -1,3 +1,14 @@
+.none {
+  display: none;
+}
+
+.active {
+  color: green;
+  display: -webkit-inline-box !important;
+  display: -ms-inline-flexbox !important;
+  display: inline-flex !important;
+}
+
 body {
   background-color: #932E4A;
   margin: 0;
@@ -195,9 +206,9 @@ p.description {
 }
 
 .search .search__male li {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-inline-box !important;
+  display: -ms-inline-flexbox !important;
+  display: inline-flex !important;
 }
 
 .search .search__male li img {

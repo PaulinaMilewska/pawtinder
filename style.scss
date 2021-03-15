@@ -1,6 +1,19 @@
 $base-color: #932E4A;
 $grey: #EDE6E6;
 
+.none{
+    display: none;
+}
+
+// .piesek{
+//     background-color: green;
+// }
+
+.active{
+    color: green;
+    // font-weight: 600;
+    display: inline-flex !important;
+}
 body{
     background-color: $base-color;
     margin: 0;
@@ -153,7 +166,7 @@ p.description {
             padding: 0;
         }
         & li{
-            display: inline-flex;
+            display: inline-flex !important;
             & img{
                 width: 22px;
                 margin: -12px 0px 0 32px;

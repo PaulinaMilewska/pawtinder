@@ -1,4 +1,21 @@
+$base-color: #932E4A;
+
+body{
+    background-color: $base-color;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+}
+
+p {
+    margin: 16px 0 0 30px;
+}
 .container{
+    color: $base-color;
     min-height: 1000px;
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -6,79 +23,191 @@
     grid-template-areas: 
     "search gallery";
 }
-.header ul {
-    display: flex;
-}
-ul{
-    list-style: none;
-}
-.search{
-    grid-area: search;
+
+.header{
+    & ul {
+        display: flex;
+    }
+    & li img{
+        width: 50px;
+    }
+    & .title{
+        font-size: 29px;
+        font-weight: 600;
+        margin: 21px 0 0 8px;
+        letter-spacing: 3px;
+        color: #EDE6E6;
+        opacity: 0.5;
+    }
+    & .title{
+        font-size: 29px;
+        font-weight: 600;
+        margin: 21px 0 0 8px;
+        letter-spacing: 3px;
+        color: #EDE6E6;
+        opacity: 0.5;
+    }
+    &.logo{
+        margin: 12px 0 0 37px;
+        color: #EDE6E6;
+        opacity: 0.5;
+    }
 }
 
 .gallery{
     grid-area: gallery;
 }
 
-.box .dog-image{
-    width: 200px;
+li.dog-box__name p {
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Poppins';
+    text-transform: uppercase;
+    margin: 3px 0 0 -43px;
 }
-.box .dog-star{
-    width: 30px;
+p.description {
+    margin: -38px 5px 0 7px;
 }
-.dog-box ul{
-    display: flex;
-}
-.dog-box li{
-    padding: 15px;
-}
-.box{
-    width: 300px;
-}
-.search{
-    background-color: lightgray;
-}
-.search .search__male ul{
-    display: flex;
-}
-.search .search__male li{
-    padding: 15px;
-    display: inline-flex;
-}
-.search .search__male li img{
-    width: 50px;
-    flex: 1;
-}
-.search .search__male li p{
-    
-    flex: 1;
-}
-.search .search__stars ul{
-    display: flex;
-}
-.search .search__stars li{
-    padding: 15px;
-}
-.search .search__stars li img{
-    width: 50px;
-}
-.header li img{
-    width: 50px;
-}
-
-
 .box {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
-    // grid-template-areas: 
-    // "search gallery";
+    color: black;
+    width: 300px;
+    margin-left: 31px;    
+    & .dog-image{
+        width: 250px;
+        height: 386px;
+        border-radius: 22px;
+        }
+    & .dog-star{
+        width: 16px;
+    }
   }
 
   .dog-box{
       width: 20vw;
+      margin-bottom: 25px;
+      & ul{
+        display: flex;
+        }
+        & li{
+            padding: 15px;
+        }
+        &__star {
+            margin: 3px 0 0 40px;
+            background-color: $base-color;
+            color: white;
+            padding: 0 10px;
+            border-radius: 10px;
+        }
+        &__content {
+            background-color: white;
+            border-radius: 20px;
+            width: 250px;
+            height: 165px;
+            margin: -125px 0 0 0px;
+            z-index: 1;
+            position: relative;
+            background-color: white;
+            border-radius: 20px;
+            & p{
+                font-size: 13px;
+            }
+    }
   }
 
+.search{
+    grid-area: search;
+    background-color: lightgray;
+    width: 333px;
+    height: 634px;
+    margin: 2px 0 0 74px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 22px;
+    &__title {
+        text-transform: uppercase;
+        font-size: 15px;
+        padding: 29px 25px 17px 19px;
+    }
+    &__male {
+        display: flex;
+        flex-direction: column;
+    }
+    &__stars > p{
+        margin: 26px 0 0 32px;
+    }
+    & .search__male{
+        & .search__ul{
+            display: flex;
+            flex-direction: row;
+            margin-left: 0px;
+            padding: 0;
+        }
+        & li{
+            display: inline-flex;
+            & img{
+                width: 22px;
+                margin: -12px 0px 0 32px;
+            }
+            & p{
+                margin: -5px 7px 0 6px;
+            }
+        }
+    }
+    & .search__stars{
+        & ul{
+            display: flex;
+             margin-left: -18px;
+        }
+        & li{
+            display: flex;
+            border: 1px solid $base-color;
+            margin: 0px 4px 0px 10px;
+            padding: 0 5px;
+            border-radius: 10px;
+            & p{
+                margin: 2px 7px 0 6px;
+                font-size: 16px;
+            }
+            & img{
+                width: 10px;
+            }
+        }
+    }
+    &.range-slider {
+        margin: 23px 0 0 17px;
+    }    
+}
+
+  @media (max-width: 768px) {
+    .box {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+    }
+    .container{
+        min-height: 1000px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto;
+        grid-template-areas: 
+        "search" "gallery";
+        align-items: center;
+        justify-items: center;
+    }
+    .search {
+        margin: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .gallery {
+        margin-top: 30px;
+    }
+
+  }
 
 @mixin range-slider($width, $height, $input-top, $input-bg-color, $input-thumb-color, $float:none, $input-height:20px, $input-border-radius:14px) {
     position: relative;
@@ -117,9 +246,9 @@ ul{
       height: $input-height;
       border: none;
       border-radius: $input-border-radius;
-      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, lighten($input-thumb-color,60%)), color-stop(100%, $input-thumb-color)); /* android <= 2.2 */
-      background-image: -webkit-linear-gradient(top , lighten($input-thumb-color,60%) 0, $input-thumb-color 100%); /* older mobile safari and android > 2.2 */;
-      background-image: linear-gradient(to bottom, lighten($input-thumb-color,60%) 0, $input-thumb-color 100%); /* W3C */
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, lighten($input-thumb-color,60%)), color-stop(100%, $input-thumb-color));
+      background-image: -webkit-linear-gradient(top , lighten($input-thumb-color,60%) 0, $input-thumb-color 100%);
+      background-image: linear-gradient(to bottom, lighten($input-thumb-color,60%) 0, $input-thumb-color 100%); 
     }
     
     input[type="range"]::-moz-range-thumb {

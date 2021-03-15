@@ -98,11 +98,13 @@ function getVals(){
              `
              <div class="dog-box">
              <img class="dog-image" src="http://getcockpit.pmedia-test.pl${dog.image.path}" alt="">
+             <div class="dog-box__content">
              <ul>
-                <li><p>${dog.name}, ${dog.age}</p></li>
-                <li><p>${dog.stars} <img class="dog-star" src="images/star.svg" alt=""><p/></li>
+                <li class="dog-box__name"><p>${dog.name}, ${dog.age}</p></li>
+                <li><p class="dog-box__star">${dog.stars} <img class="dog-star" src="images/star.svg" alt=""><p/></li>
              </ul>
-             <p>${dog.description}</p>
+             <p class="description">${dog.description}</p>
+             </div>
              </div>
              `
              )

@@ -1,4 +1,5 @@
 $base-color: #932E4A;
+$grey: #EDE6E6;
 
 body{
     background-color: $base-color;
@@ -14,6 +15,11 @@ ul{
 p {
     margin: 16px 0 0 30px;
 }
+
+.logo {
+    opacity: 0.5;
+}
+
 .container{
     color: $base-color;
     min-height: 1000px;
@@ -36,7 +42,7 @@ p {
         font-weight: 600;
         margin: 21px 0 0 8px;
         letter-spacing: 3px;
-        color: #EDE6E6;
+        color: $grey;
         opacity: 0.5;
     }
     & .title{
@@ -44,12 +50,12 @@ p {
         font-weight: 600;
         margin: 21px 0 0 8px;
         letter-spacing: 3px;
-        color: #EDE6E6;
+        color: $grey;
         opacity: 0.5;
     }
     &.logo{
         margin: 12px 0 0 37px;
-        color: #EDE6E6;
+        color: $grey;
         opacity: 0.5;
     }
 }
@@ -82,6 +88,7 @@ p.description {
         }
     & .dog-star{
         width: 16px;
+        filter: invert(1);
     }
   }
 

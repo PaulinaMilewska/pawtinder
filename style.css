@@ -14,6 +14,10 @@ p {
   margin: 16px 0 0 30px;
 }
 
+.logo {
+  opacity: 0.5;
+}
+
 .container {
   color: #932E4A;
   min-height: 1000px;
@@ -97,6 +101,8 @@ p.description {
 
 .box .dog-star {
   width: 16px;
+  -webkit-filter: invert(1);
+          filter: invert(1);
 }
 
 .dog-box {
